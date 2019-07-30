@@ -27,6 +27,12 @@
 	<br>
 	<a href="changePWD.jsp">Change Password</a>
 	<br>
+	<table cellpadding="5" cellspacing="5" border="1">
+		<tr bgcolor="#A52A2A">
+			<td><b>username</b></td>
+			<td><b>password</b></td>
+			<td><b>email id</b></td>
+		</tr>
 	<%
 		String url = "jdbc:mysql://localhost:3306/Login1";
 		String user = "root";
@@ -46,13 +52,12 @@
 			{
 	%>
 	
-	<table>
+	
 		<tr>
 			<td><%=rs.getString("name")%></td>
 			<td><%=rs.getString("pass")%></td>
 			<td><%=rs.getString("email")%></td>
 		</tr>
-	</table>
 	
 	<%		}
 		} 
@@ -61,6 +66,7 @@
 			e.printStackTrace();
 		}
 	%>
+	</table>
 	
 </body>
 </html>
